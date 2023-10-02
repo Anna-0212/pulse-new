@@ -1,0 +1,84 @@
+.carousel {
+    padding: 81px 0;
+    &__inner {
+        position: relative;
+        width: 750px;
+        margin: 0 auto;
+    }
+    .slick-prev, .slick-next {
+        border: none;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -66px;
+        position: absolute;
+        background-color: #fff;
+        img {
+            width: 31px;
+            height: 50px;
+        }
+    }
+    .slick-next {
+        left: auto;
+        right: -66px;
+    }
+    //т.к. мы используем tiny slider,  можем написать так (см. в console.log)
+    // .tns-item {
+    //     img {
+    //         display: block;
+    //         margin: 0 auto;
+    //     }
+    // }
+}
+
+
+
+@media all and (max-width: 920px) {
+    .carousel {
+        &__inner {
+            width: 650px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 770px) {
+    .carousel {
+        &__inner {
+            width: 600px;
+        }
+    }
+}
+
+@media all and (max-width: 540px) {
+    .carousel {
+        &__inner {
+            width: 490px;
+            .slick-dots {
+                display: flex;
+                justify-content: center;
+                list-style-type: none;
+                button {
+                    background-color: $main-color;
+                    margin: 10px;
+                    width: 30px;
+                    height: 30px;
+                    border: none;
+                    border-radius: 50%;
+                    color: $main-color;
+                    opacity: 0.9;
+                }
+            }
+            
+        }
+    }
+}
+
+@media all and (max-width: 420px) {
+    .carousel {
+        &__inner {
+            width: 350px;
+        }
+    }
+}
